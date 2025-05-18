@@ -1,0 +1,33 @@
+This project uses Arcadia Engine, build 181004
+
+Prototype v1 breakdown (Complete 181012):
+
+- The server connection should be automatic when starting the application, and the connection status and any form of warning message or news alerts should be sent down and displayed on the login screen (sent encrypted)
+- Login screen where the password is properly hidden, and both the username and password are encrypted before being sent up to the server.
+- Logging in will bring the user to the home screen, showing the latest uploads
+- The server should send the message and notification count to clients as they log in
+- New messages and alerts should show a notification symbol on the menu option in the client, which should always be visible. Left-side menu that juts out when selected, maybe?
+- Allow one-click downloading of a file, showing a status bar on the bottom of the screen for whatever is currently downloading
+- A few example files uploaded manually
+----------------------------------------
+
+Prototype v2 breakdown (currently underway):
+
+- The server window should show the list of currently connected users, showing user identifier, name, and current status (downloading? uploading?)
+- The server should be able to send files to multiple people at once (Each user connection should contain it's own FileSendTask*)
+- The server should ensure two users can't share the same login (fail the second attempt)
+
+- The client should allow for the uploading of files to the server, which should list them as hosted files, updating the "latest uploads" list for all clients. Clients can add names, titles, tags, etc
+- The login button needs to be more obvious, and all buttons need to highlight when moused-over
+- Clicking to download a second file in the client should queue it for the user-connection on the server, and automatically start the download as soon as the previous one is confirmed finished
+- The notifications menu should be able to be opened and notifications should be sent down and be readable on the client
+----------------------------------------
+
+
+Future features:
+
+- The messages menu should be able to be opened and messages should be sent down and be readable on the client
+- Add "browse all", "browse by user", and to "search by keyword"
+- Allow users to recommend files to others
+- Allow users to put up a "bounty" request (request that someone find a certain movie or album?)
+- Add the bounty menu to the left-hand sidebar (with "new" notification marker)
